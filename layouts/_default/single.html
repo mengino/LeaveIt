@@ -78,7 +78,7 @@
                      {{ template "_internal/disqus.html" . }}
                  {{ end }}
 
-                 {{ if ne .Params.gitalk.enable true }}
+                 {{ with .Params.gitalk.enable }}
                      {{ template "partials/gitalk.html" . }}
                  {{ end }}
           {{ end }}
